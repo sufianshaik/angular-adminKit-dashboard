@@ -1,8 +1,17 @@
 <div class = "wrapper">
-  <app-sidebar [isFlag] = "toggleValue"></app-sidebar>
+  <app-sidebar [isFlag] = "toggleValue">
+  </app-sidebar>
   <div class = "main">
+    <div class = ""> 
       <app-navbar (flagToApp)="toggleChange($event)"></app-navbar>
-      <app-dashboard></app-dashboard>
-    <app-footer></app-footer>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+    <div>
+      <app-footer></app-footer>
+    </div>
+     
   </div>
+ 
 </div>
